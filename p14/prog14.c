@@ -39,6 +39,7 @@ int main(int argc, char* argv[]){
     else if(S_ISREG(s->st_mode)){
         printf("Regular File\n");
     }
+   else  printf("Others\n");
 
 
 

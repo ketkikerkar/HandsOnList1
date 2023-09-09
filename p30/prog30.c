@@ -35,7 +35,7 @@ int main(){
         printf("Daemon Process\n");
         //execl("/bin/sh", "sh","/home/ketaki/sslab2/p30/file.sh",NULL);
         if(system("sh $HOME/sslab2/p30/file.sh")!=0){
-        perror("Error execl ");
+        perror("Error ");
         return 1;
         }
         

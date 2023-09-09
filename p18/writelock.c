@@ -36,6 +36,7 @@ int main(){
 	fcntl(fd,F_SETLKW,&lock);
 	printf("Current ticket count:%d",db->ticket_count);
 	db->ticket_count++;
+	lseek(fd,(input-1)*sizeof(db),SEEK_SET);
 	lock.l_start=(input-1)*sizeof(db);
 	write(fd,&db,sizeof(db));
 	printf("\nTo book ticket, press Enter\n");

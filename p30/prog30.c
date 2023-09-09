@@ -33,7 +33,7 @@ int main(){
         setsid();
         sleep(mktime(&desired_time)-mktime(cur_time));
         printf("Daemon Process\n");
-        //execl("/bin/sh", "sh","/home/ketaki/sslab2/p30/file.sh",NULL);
+        
         if(system("sh $HOME/sslab2/p30/file.sh")!=0){
         perror("Error ");
         return 1;
